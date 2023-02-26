@@ -1,0 +1,19 @@
+
+default: &default
+  adapter: postgresql
+  encoding: utf8
+  pool: 30
+  timeout: 5000
+  username: sayak
+  password: sayak
+  host: localhost
+
+development:
+  <<: *default
+  database: alpha_development
+
+ 
+test:
+  <<: *default
+  database: alpha_test
+
